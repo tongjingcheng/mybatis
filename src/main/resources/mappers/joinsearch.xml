@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tongjingcheng.mybatis.mapper.StudentMapper">
+    <select id="joinSearch" resultType="joinSearch">
+        select t1.name,t1.sex,t2.content,t2.news_title from news t1  left join zft_news t2 on t2.news_id=t1.id
+        <where>
+          t1.id >= 1
+        </where>
+    </select>
+</mapper>
