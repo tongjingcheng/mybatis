@@ -3,6 +3,7 @@ package com.tongjingcheng.mybatis.controller;
 import com.tongjingcheng.mybatis.entity.JoinSearch;
 import com.tongjingcheng.mybatis.response.StudentVo;
 import com.tongjingcheng.mybatis.service.StudentService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,6 +21,7 @@ import java.util.Map;
  * @since 2019-01-29 14:39
  */
 @Controller
+@Slf4j
 public class HomeController {
 
     @Autowired
@@ -49,6 +51,7 @@ public class HomeController {
     @RequestMapping(value="test")
     @ResponseBody
     public List<StudentVo> test() {
+        log.info("test test test");
         return studentService.studentList();
     }
 
